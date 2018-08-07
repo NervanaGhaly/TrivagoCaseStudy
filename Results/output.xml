@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180807 16:36:15.642">
+<suite id="s1" name="TrivagoMag" source="C:\development\robot-scripts\TrivagoRoom5\tests\TrivagoMag.robot">
+<test id="s1-t1" name="Subscribe to the Newsletter">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20180807 16:36:15.814" level="INFO">Opening browser 'ie' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20180807 16:36:15.814" endtime="20180807 16:36:18.142"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180807 16:36:18.142" endtime="20180807 16:36:18.158"></status>
+</kw>
+<status status="PASS" starttime="20180807 16:36:15.814" endtime="20180807 16:36:18.158"></status>
+</kw>
+<kw name="Go To Trivago Magazine Web Page" library="TrivagoMagApp">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20180807 16:36:18.158" level="INFO">Opening url 'http://magazine.trivago.com/'</msg>
+<status status="PASS" starttime="20180807 16:36:18.158" endtime="20180807 16:36:22.924"></status>
+</kw>
+<status status="PASS" starttime="20180807 16:36:18.158" endtime="20180807 16:36:22.924"></status>
+</kw>
+<kw name="Verify Page Load" library="LandingPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${LANDING_NAVIGATION_ELEMENT}</arg>
+</arguments>
+<status status="PASS" starttime="20180807 16:36:22.924" endtime="20180807 16:36:23.002"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20180807 16:36:26.002" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20180807 16:36:23.002" endtime="20180807 16:36:26.002"></status>
+</kw>
+<status status="PASS" starttime="20180807 16:36:22.924" endtime="20180807 16:36:26.002"></status>
+</kw>
+<status status="PASS" starttime="20180807 16:36:18.158" endtime="20180807 16:36:26.002"></status>
+</kw>
+<kw name="Subscribe to Newsletter" library="TrivagoMagApp">
+<kw name="Select Newsletter Checkbox" library="LandingPage">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="confirm"]</arg>
+</arguments>
+<msg timestamp="20180807 16:36:26.002" level="INFO">Selecting checkbox 'xpath=//*[@id="confirm"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180807 16:36:26.627" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20180807 16:36:26.315" endtime="20180807 16:36:26.627"></status>
+</kw>
+<msg timestamp="20180807 16:36:26.627" level="FAIL">Checkbox with locator 'xpath=//*[@id="confirm"]' not found.</msg>
+<status status="FAIL" starttime="20180807 16:36:26.002" endtime="20180807 16:36:26.627"></status>
+</kw>
+<status status="FAIL" starttime="20180807 16:36:26.002" endtime="20180807 16:36:26.627"></status>
+</kw>
+<status status="FAIL" starttime="20180807 16:36:26.002" endtime="20180807 16:36:26.627"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20180807 16:36:26.627" endtime="20180807 16:36:29.659"></status>
+</kw>
+<status status="PASS" starttime="20180807 16:36:26.627" endtime="20180807 16:36:29.659"></status>
+</kw>
+<doc>Verify that user is able to subscribe to the Newsletters service</doc>
+<tags>
+<tag>test3</tag>
+</tags>
+<status status="FAIL" starttime="20180807 16:36:15.814" endtime="20180807 16:36:29.659" critical="yes">Checkbox with locator 'xpath=//*[@id="confirm"]' not found.</status>
+</test>
+<doc>This is Trivago Magazine Test Suite</doc>
+<status status="FAIL" starttime="20180807 16:36:15.642" endtime="20180807 16:36:29.659"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">test3</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="TrivagoMag">TrivagoMag</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
