@@ -63,6 +63,6 @@ Below are the steps to install Robot Framework in Windows 10:
 To run the test suite from Pycharm, please use the below:
 	1. Click View > Tool Windows > Terminal 
 	2. Execute robot commands:
-		robot -d results tests/TrivagoMag.robot
-		robot -d results -i<test tag> tests/TrivagoMag.robot ---> This is a command to run a specific test case within the test 		suite by including its Tag
-		robot -d results -t<test case name> tests/TrivagoMag.robot ---> This is a command to run a specific test case within the 		test suite by its name
+	robot -d results tests/TrivagoMag.robot
+	robot -d results -i<test tag> tests/TrivagoMag.robot ---> This is a command to run a specific test case within the test 		suite by including its Tag
+	robot -d results -t<test case name> tests/TrivagoMag.robot ---> This is a command to run a specific test case within the 		test suite by its name
